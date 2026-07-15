@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeetCode to GitHub - Options</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { width: 500px; padding: 20px; }
+    h1 { font-size: 22px; margin-bottom: 20px; }
+    .field { margin-bottom: 14px; }
+    .hint { font-size: 11px; color: #6c757d; margin-top: 2px; }
+    button { margin-top: 8px; }
+    .msg-row { margin-top: 12px; }
+    .msg-row.success { color: #155724; }
+    .msg-row.error { color: #721c24; }
+    .section { margin-bottom: 24px; }
+    .section h3 { font-size: 16px; margin-bottom: 8px; color: #1a1a2e; }
+    .test-row { display: flex; gap: 8px; align-items: center; margin-top: 12px; }
+    .test-row button { width: auto; padding: 8px 16px; }
+    #testResult { font-size: 12px; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <div class="container" style="width:100%">
+    <h1>LeetCode → GitHub Options</h1>
+
+    <div class="section">
+      <h3>GitHub Configuration</h3>
+      <div class="field">
+        <label for="githubToken">Personal Access Token</label>
+        <input type="password" id="githubToken" placeholder="ghp_xxxxxxxxxxxx">
+        <div class="hint">Create at <a href="https://github.com/settings/tokens" target="_blank">github.com/settings/tokens</a> with 'repo' scope.</div>
+      </div>
+      <div class="field">
+        <label for="repoOwner">Repository Owner (user or org)</label>
+        <input type="text" id="repoOwner" placeholder="your-username">
+      </div>
+      <div class="field">
+        <label for="repoName">Repository Name</label>
+        <input type="text" id="repoName" placeholder="leetcode-solutions">
+        <div class="hint">The repo must already exist on GitHub.</div>
+      </div>
+      <button id="saveBtn">Save Settings</button>
+      <div id="msg" class="msg-row hidden"></div>
+    </div>
+
+    <div class="section">
+      <h3>Test Connection</h3>
+      <p class="small">Verify your GitHub token and repo are working.</p>
+      <div class="test-row">
+        <button id="testBtn">Test Connection</button>
+      </div>
+      <div id="testResult" class="hidden"></div>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

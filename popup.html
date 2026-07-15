@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeetCode to GitHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>LeetCode → GitHub</h2>
+
+    <div id="status-section">
+      <div id="config-status" class="status-badge">Checking...</div>
+    </div>
+
+    <div id="settings-form">
+      <div class="field">
+        <label for="githubToken">GitHub Token (PAT)</label>
+        <input type="password" id="githubToken" placeholder="ghp_...">
+      </div>
+      <div class="field">
+        <label for="repoOwner">Repository Owner</label>
+        <input type="text" id="repoOwner" placeholder="your-username">
+      </div>
+      <div class="field">
+        <label for="repoName">Repository Name</label>
+        <input type="text" id="repoName" placeholder="leetcode-solutions">
+      </div>
+      <button id="saveBtn">Save Settings</button>
+      <p id="saveMsg" class="hidden"></p>
+    </div>
+
+    <div id="info-section" class="hidden">
+      <p>✅ Configured</p>
+      <p id="repoDisplay"></p>
+      <p class="small">Solve a LeetCode problem to auto-push.</p>
+    </div>
+
+    <hr>
+    <div class="footer-links">
+      <a href="#" id="openOptions">Advanced Settings</a>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
